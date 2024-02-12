@@ -41,19 +41,23 @@ class MovieFormType extends AbstractType
                 'label' => false
             ])
             ->add('imagePath', FileType::class, [
-                'attr' => [
-                    'class' => 'py-10',
-                    'placeholder' => 'Enter title'
-                ],
-                'label' => false
-
-
-            ])
-            ->add('actors', EntityType::class, [
-                'class' => Actor::class,
-                'choice_label' => 'id',
-                'multiple' => true,
+                'required' => false,
+                'mapped' => false,
             ]);
+        // ->add('imagePath', FileType::class, [
+        //     'attr' => [
+        //         'class' => 'py-10',
+        //         'placeholder' => 'Enter title'
+        //     ],
+        //     'label' => false
+
+
+        // ]);
+        // ->add('actors', EntityType::class, [
+        //     'class' => Actor::class,
+        //     'choice_label' => 'id',
+        //     'multiple' => true,
+        // ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
